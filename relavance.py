@@ -53,7 +53,7 @@ grammar = LlamaGrammar.from_string(grammar)
 
 # Model path - change this to the correct path for your model
 llm = Llama(
-    model_path = r"/root/ravi-main/llama-3-instruct-8b-sppo-iter3-q6_k.gguf",
+    model_path = r"/root/ravi-main/Llama-3-Instruct-8B-SPPO-Iter3-Q6_K.gguf",
     n_gpu_layers = -1,
     seed = 123,
     n_ctx = 8192,
