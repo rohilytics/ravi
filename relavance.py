@@ -2,7 +2,7 @@ from llama_cpp import Llama, LlamaGrammar
 import sqlite3
 
 # Connect to the SQLite database
-conn = sqlite3.connect('/root/ravi-main/reuters.db')
+conn = sqlite3.connect('/workspace/reuters.db')
 cursor = conn.cursor()
 
 # Add a new column 'relevance' to store the final score, if it doesn't already exist.
@@ -53,7 +53,7 @@ grammar = LlamaGrammar.from_string(grammar)
 
 # Model path - change this to the correct path for your model
 llm = Llama(
-    model_path = r"/root/ravi-main/Llama-3-Instruct-8B-SPPO-Iter3-Q6_K.gguf",
+    model_path = r"/workspace/Llama-3-Instruct-8B-SPPO-Iter3-Q6_K.gguf",
     n_gpu_layers = -1,
     seed = 123,
     n_ctx = 8192,
