@@ -12,7 +12,7 @@ except sqlite3.OperationalError:
     pass  # Ignore if the column already exists.
 
 # Fetch only news articles where the relevance score is NULL (i.e., they haven't been processed yet)
-cursor.execute("SELECT headline, text, rowid FROM news WHERE relevance IS NULL")
+cursor.execute("SELECT headline, text, rowid FROM news WHERE rowid >= 10317 AND relevance IS NULL")
 news_articles = cursor.fetchall()
 
 # Prompt template
